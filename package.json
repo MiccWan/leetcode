@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@datastructures-js/priority-queue": "^5.2.0"
+  },
+  "type": "module"
+}
