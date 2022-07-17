@@ -6,6 +6,8 @@ var sortedSquares = function (nums) {
   let left = 0;
   let right = nums.length;
 
+  // find the first index with `value <= 0`
+  // e.g. [-7, -2(left), 0(right), 1, 3, 5]
   while (right > left) {
     const mid = Math.floor((left + right) / 2);
     if (nums[mid] >= 0) {
@@ -17,6 +19,7 @@ var sortedSquares = function (nums) {
   }
   left--;
 
+  // sequentially append the square of values using the pointers
   const result = [];
   while (left >= 0 || right < nums.length) {
     if (left < 0) {

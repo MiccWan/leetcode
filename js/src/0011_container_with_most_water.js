@@ -7,17 +7,17 @@ var maxArea = function (height) {
   let r = height.length - 1;
   let maxA = (r - l) * Math.min(height[l], height[r]);
   while (r > l) {
-    const oldL = l;
-    const oldR = r;
+    const oriL = l;
+    const oriR = r;
 
-    if (height[l] <= height[oldR]) {
-      while (r > l && height[oldL] >= height[l]) {
+    if (height[oriL] <= height[oriR]) {
+      while (r > l && height[oriL] >= height[l]) {
         l++;
       }
     }
 
-    if (height[oldL] >= height[r]) {
-      while (r > l && height[r] <= height[oldR]) {
+    if (height[oriL] >= height[oriR]) {
+      while (r > l && height[r] <= height[oriR]) {
         r--;
       }
     }

@@ -18,16 +18,14 @@ var rotate = function (nums, k) {
     let j = i;
     let tmp = nums[j];
     let next;
-    while(next != i) {
+    while (next != i) {
       next = (j + k) % nums.length;
-      nums[next] ^= tmp;
-      tmp ^= nums[next];
-      nums[next] ^= tmp;
+      [nums[next], tmp] = [tmp, nums[next]];
       j = next;
     }
   }
 };
 
-const a = [1,2,3,4,5,6,7];
+const a = [1, 2, 3, 4, 5, 6, 7];
 rotate(a, 3);
 console.log(a);
