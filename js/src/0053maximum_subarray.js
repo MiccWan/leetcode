@@ -32,11 +32,3 @@ var maxSubArray = function (A) {
     console.log(bestLeft, bestRight);
     return max;
 };
-
-function test() {
-    maxSubArray([-2,1,-3,4,-1,2,1,-5,4]);
-    maxSubArray([5,4,-1,7,8]);
-    maxSubArray([1]);
-}
-
-test();
